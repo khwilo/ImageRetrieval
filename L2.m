@@ -73,7 +73,7 @@ arrayfun(@cla, findall(0, 'type', 'axes'));
 
 % display query image
 str_name = int2str(query_img_name);
-query_img = imread( strcat(folder_name, '\', str_name, img_ext) );
+query_img = imread( strcat(folder_name, '/', str_name, img_ext) );
 subplot(3, 7, 1);
 imshow(query_img, []);
 title('Query Image', 'Color', [1 0 0]);
@@ -82,7 +82,7 @@ title('Query Image', 'Color', [1 0 0]);
 for m = 1:numOfReturnedImages
     img_name = sortedEuclidImgs(m);
     img_name = int2str(img_name);
-    str_img_name = strcat(folder_name, '\', img_name, img_ext);
+    str_img_name = strcat(folder_name, '/', img_name, img_ext);
     returned_img = imread(str_img_name);
     subplot(3, 7, m+1);
     imshow(returned_img, []);

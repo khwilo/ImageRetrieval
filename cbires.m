@@ -292,7 +292,7 @@ precAndRecall = zeros(2, 10);
 for k = 1:15
     randImgName = randi([0 999], 1);
     randStrName = int2str(randImgName);
-    randStrName = strcat('images\', randStrName, '.jpg');
+    randStrName = strcat('images/', randStrName, '.jpg');
     randQueryImg = imread(randStrName);
     
     % extract query image features
